@@ -18,6 +18,14 @@ const bodyParser = require('body-parser');                          // Acces mod
 app.use(express.json());
 app.use(bodyParser.json());     
 
+// Make server can be get with different origin/domain CORS (Cross Origin Resource Sharing)
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");                                                 // Acces database can be get in different origin (domain)
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");   // Set header in Access-Contorl-Allow Cross Origin Resource Sharing
+    res.header("Access-Control-Allow-Methods", "DELETE, GET, POST, PUT");                           // Set methode in Access-Contorl-Allow Cross Origin Resource Sharing
+    next();
+});     
+
 var conn = mysql.createConnection({                                 // Function to create connection with database MySQL
     host: 'localhost',                                              // Default host
     user: 'root',                                                   // Default user

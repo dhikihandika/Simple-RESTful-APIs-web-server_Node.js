@@ -7,4 +7,4 @@
 - Next initialize your project use CLI as follows:
   * npm init
 - Than you start to install node_module in your project. To understad about installation about that as follow this link             https://docs.npmjs.com/cli/install
-- Some node_module contain in Simple RESTful-APIs-web-server is mysql, express, body-parser, http and more
+- Some node_module contain in Simple RESTful-APIs-web-server is mysql, express, body-parser, http and more. You can add require module corresponding with your apps.
